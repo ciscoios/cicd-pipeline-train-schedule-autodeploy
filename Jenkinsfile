@@ -2,8 +2,10 @@ pipeline {
     agent any
     environment {
         //be sure to replace "willbla" with your own Docker Hub username
+
         DOCKER_IMAGE_NAME = "iptcp/train-schedule-autodeploy"
         CANARY_REPLICAS = 0
+
     }
     stages {
         stage('Build') {
@@ -92,6 +94,8 @@ pipeline {
             }
         }
     }
+
+
     post {
         cleanup {
                 kubernetesDeploy(
@@ -102,4 +106,5 @@ pipeline {
         }
     }
            
+
 }
