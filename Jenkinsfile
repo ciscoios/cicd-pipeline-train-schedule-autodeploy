@@ -4,7 +4,7 @@ pipeline {
         //be sure to replace "willbla" with your own Docker Hub username
 
         DOCKER_IMAGE_NAME = "iptcp/train-schedule-autodeploy"
-        CANARY_REPLICAS = 0
+        CANARY_REPLICAS = 1
 
     }
     stages {
